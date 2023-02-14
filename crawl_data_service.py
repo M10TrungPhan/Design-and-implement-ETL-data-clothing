@@ -147,6 +147,7 @@ if __name__ == "__main__":
     parser.add_argument("--path_save_data", dest= "path_save_data", type=str, required=True)
     parser.add_argument('--number_crawler', dest="number_crawler", default=5, type=int)
     parser.add_argument('--mode_crawl', dest="mode_crawl", default="CATEGORY")
+    parser.add_argument('--keyword', dest="keyword", default="Áo")
     args = parser.parse_args()
     shop_name = args.shop_name
     search_service = import_from_string(file_class[shop_name]["search_link"])
@@ -169,6 +170,14 @@ if __name__ == "__main__":
         crawl = Crawler(search, item_shop, args.number_crawler)
         crawl.start()
         crawl.join()
+    elif args.mode_crawl == 'KEYWORD':
+        print(f"MODE CRAWL: {args.mode_crawl}")
+        path = args.path_save_data
+        keyword = str(args.keyword).replace("_", " ")
+        print(f"KEYWORD : {keyword}")
+        search = search_service(keyword, path, mode_crawl=args.mode_crawl)
+        crawl = Crawler(search, item_shop, args.number_crawler)
+        crawl.start()
+        crawl.join()
 
-
-    #python .\crawl_data_service.py --shop_name CoupleTx --path_save_data \\smb-ai.tmt.local\Public-AI\Public\Data\Clothing_shop\Coupletx_shop\test_coupletx\ --mode_crawl CATEGORY
+    #python .\crawl_data_service.py --shop_name CoupleTx --path_save_data \\smb-ai.tmt.local\Public-AI\Public\Data\Clothing_shop\Coupletx_shop\test_coupletx\ --mode_crawl CATEGORY --keyword Áo
