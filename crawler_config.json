@@ -1,0 +1,34 @@
+{
+  "Ivymoda": {
+    "search_link": "services.ivymoda_crawl_by_search.IvyModaCrawlBySearch",
+    "format_item": "objects.item_ivymoda.ItemIvyModa",
+    "get_link_all_category": "services.ivymoda_crawl_by_search.get_link_all_category"
+  },
+  "Gumac": {
+    "search_link": "services.gumac_crawl_by_search.GumacCrawlBySearch",
+    "format_item": "objects.item_gumac.ItemGumac",
+    "get_link_all_category": "services.gumac_crawl_by_search.get_link_all_category"
+  },
+  "CoupleTx": {
+    "search_link": "services.couple_tx_crawl_by_search.CoupleTxCrawlBySearch",
+    "format_item": "objects.item_coupletx.ItemCoupleTx",
+    "get_link_all_category": "services.couple_tx_crawl_by_search.get_link_all_category"
+  },
+    "NHPL": {
+    "search_link": "services.shopee_crawl_by_search_new.ShopeeCrawlBySearch",
+    "format_item": "objects.item_shopee_ver2.ItemShopee"
+  },
+    "Tiki": {
+    "search_link": "services.tiki_crawl_by_search.TikiCrawlBySearch",
+    "format_item": "objects.item_tiki.ItemTiki"
+  },
+    "Lazada": {
+    "search_link": "services.lazada_crawl_by_search.LazadaCrawlBySearch",
+    "format_item": "objects.item_lazada.ItemLazada"
+  },
+    "Tinhte": {
+    "search_link": "services.tinhte_crawl_by_search.TinhTeCrawlBySearch",
+    "format_item": "objects.item_tinhte.ItemTinhTe"
+  }
+
+}
